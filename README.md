@@ -16,21 +16,7 @@ This project is a simulation of a triage workflow of a lightweight Security Oper
 
 ## Architecture Overview
 
-High-level data flow:
-
-```text
-Raw Alerts CSV
-     ↓
-Parser / Normalizer
-     ↓
-Detection & Severity Scoring
-     ↓
-MITRE ATT&CK Mapping
-     ↓
-AI / Template-Based Summary Generator
-     ↓
-CSV + Markdown Incident Report
-```
+![architecture_diagram](/screenshots/08-architecture-diagram.png)
 
 Key components:
 
