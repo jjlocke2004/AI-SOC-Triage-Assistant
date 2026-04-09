@@ -5,7 +5,8 @@ The recommended scope focuses on suspicious PowerShell activity, brute-force log
 
 ## Skills and Relevancy
 
-This project demonstrates practical skills in Python scripting, alert triage, structured detection logic, ATT&CK mapping, analyst-style documentation, and AI-assisted summarization. Guidance on AI-era SOC workflows consistently emphasizes automation, contextual triage, and analyst oversight, which makes this project a credible portfolio item for cybersecurity roles.
+This project demonstrates practical skills in Python scripting, alert triage, structured detection logic, ATT&CK mapping, analyst-style documentation, and AI-assisted summarization. 
+Guidance on AI-era SOC workflows consistently emphasizes automation, contextual triage, and analyst oversight, which makes this project a credible portfolio item for cybersecurity roles.
 
 ## Tools Required
 
