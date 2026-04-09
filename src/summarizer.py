@@ -58,18 +58,20 @@ def build_prompt(row) -> str:
     )
 
 def generate_summary(row):
-    """"Use Ollama to generate an analyst summary for each alert row"""
     prompt = build_prompt(row)
+    print("Calling Ollama for alert", row["alert_id"])  # debug
+
     try:
         summary = call_ollama(prompt)
+        print("Got response for alert", row["alert_id"])  # debug
         if not summary:
-            raise ValueError("Empty reponse from model")
+            raise ValueError("Empty response from model")
     except Exception as e:
-        # Fallback so the pipeline doesn't break if Ollama is down
+        print("Error for alert", row["alert_id"], "->", e)  # debug
         summary = (
-            f"LLM summary unavailable (error: {e})."
-            f"Manual summary: alert {row['alert_id']} on host {row['host']}"
-            f"with severity {row['severity']} and findings: {row['findings']}"
+            f"LLM summary unavailable (error: {e}). "
+            f"Manual summary: alert {row['alert_id']} on host {row['host']} "
+            f"with severity {row['severity']} and findings: {row['findings']}."
         )
     return summary
     
